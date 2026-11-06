@@ -12,3 +12,6 @@ Workspaces/
 PluginsUserPreferences/
 *.esproj.*.lock
 .DS_Store
+
+# Added by Lens Studio (LEAF plugin)
+leaf_plugin_settings.json

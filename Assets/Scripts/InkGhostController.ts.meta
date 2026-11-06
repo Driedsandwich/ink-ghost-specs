@@ -1,0 +1,98 @@
+- !<AssetImportMetadata/d6dfe0d4-147c-4996-9ec9-8a9497547f67>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2d67920d-1795-4b32-837d-54a68a9eeda9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2d67920d-1795-4b32-837d-54a68a9eeda9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4a4e7c43-6bf1-476b-abfe-27c74eeb55e5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4a4e7c43-6bf1-476b-abfe-27c74eeb55e5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 453f125b-34a5-4864-a64f-a64dbb3717f8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    boxSize: false
+    completeSeconds: false
+    desk: false
+    deskSize: false
+    endCard: false
+    fadeSeconds: false
+    guideBox: false
+    lesson: false
+    material: false
+    progressRow: false
+    sheet: false
+    sheetOverlay: false
+    sheetSize: false
+    strokeSeconds: false
+    targets: false
+    writingSquare: false
+    writingSquareSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - lesson: !<reference.JsonAsset> 00000000-0000-0000-0000-000000000000
+      material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      sheet: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      desk: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sheetOverlay: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      guideBox: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      writingSquare: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      progressRow: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targets: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      endCard: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      boxSize: !<float> 10.000000
+      writingSquareSize: !<float> 10.000000
+      sheetSize: !<Vec2> {x: 21.000000, y: 29.700001}
+      deskSize: !<Vec2> {x: 120.000000, y: 60.000000}
+      strokeSeconds: 1.200000
+      completeSeconds: !<float> 2.000000
+      fadeSeconds: 0.400000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"Ink Ghost lesson controller"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.JsonAsset lesson {"hint":"Lesson file (Assets/Lesson/lesson_basic_strokes.json)"}'
+    - '// @input Asset.Material material {"hint":"Unlit vertex-colour material (vertexBaseColorMaterial)"}'
+    - '// @input SceneObject sheet {"hint":"The virtual sheet (stand-in). Dragged flat on the desk until locked"}'
+    - '// @input SceneObject desk {"hint":"The virtual desk (stand-in). The sheet stays on its top"}'
+    - "// @input SceneObject sheetOverlay {\"hint\":\"Follows the sheet; holds the pinch targets and the end card (kept out of the sheet's hierarchy so pinching a target never drags the sheet)\"}"
+    - '// @input SceneObject guideBox {"hint":"SceneObject at the centre of the guide box, lying flat on the sheet"}'
+    - '// @input SceneObject writingSquare {"hint":"SceneObject at the centre of the writing square, lying flat on the sheet"}'
+    - '// @input SceneObject progressRow {"hint":"SceneObject at the centre of the progress row, along the far edge of the sheet"}'
+    - '// @input AssignableType_1 targets {"hint":"The pinch targets UI module"}'
+    - '// @input AssignableType_2 endCard {"hint":"The end-of-lesson card UI module"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float boxSize = 10 {"hint":"Side of the guide box the lesson points map onto, cm"}'
+    - '// @input float writingSquareSize = 10 {"hint":"Side of the writing square outline, cm"}'
+    - '// @input vec2 sheetSize = {21,29.7} {"hint":"Sheet size on the desk (X width, Z depth), cm"}'
+    - '// @input vec2 deskSize = {120,60} {"hint":"Desk top size (X width, Z depth), cm"}'
+    - '// @input float strokeSeconds = 1.2 {"hint":"Seconds one stroke takes to draw"}'
+    - '// @input float completeSeconds = 2 {"hint":"Seconds the completed character stays (pinches ignored)"}'
+    - '// @input float fadeSeconds = 0.4 {"hint":"Seconds the completed character takes to fade"}'
+    - '// @ui {"widget":"group_end"}'

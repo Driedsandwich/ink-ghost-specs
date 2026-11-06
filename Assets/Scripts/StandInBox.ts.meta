@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/1ab6c84c-9f10-4c7f-94ae-17c4134f9b96>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 08ccbbeb-050f-4ed1-b44e-98f1d2df3ce2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 08ccbbeb-050f-4ed1-b44e-98f1d2df3ce2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a0c95aab-7394-41a7-bc2d-ebdf96c52531
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a0c95aab-7394-41a7-bc2d-ebdf96c52531>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: c949e14e-4f95-44dd-af21-8e4f7d5911f0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    legLength: false
+    legThickness: false
+    legs: false
+    material: false
+    sideColor: false
+    size: false
+    topColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      size: !<Vec3> {x: 21.000000, y: 0.100000, z: 29.700001}
+      topColor: !<Vec3> {x: 0.800000, y: 0.800000, z: 0.800000}
+      sideColor: !<Vec3> {x: 0.620000, y: 0.620000, z: 0.620000}
+      legs: false
+      legLength: !<float> 72.000000
+      legThickness: !<float> 4.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"Preview stand-in (virtual desk or sheet)"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Material material {"hint":"Unlit vertex-colour material (vertexBaseColorMaterial)"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input vec3 size = {21,0.1,29.7} {"hint":"Box size in cm (X width, Y thickness, Z depth)"}'
+    - '// @input vec3 topColor = {0.8,0.8,0.8} {"hint":"Colour of the top face", "widget":"color"}'
+    - '// @input vec3 sideColor = {0.62,0.62,0.62} {"hint":"Colour of the side faces", "widget":"color"}'
+    - '// @input bool legs {"hint":"Add four legs under the box (for the desk)"}'
+    - '// @input float legLength = 72 {"hint":"Leg length in cm, measured down from the underside of the box", "showIf":"legs", "showIfValue":true}'
+    - '// @input float legThickness = 4 {"hint":"Leg thickness in cm", "showIf":"legs", "showIfValue":true}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/e8e1b6e2-7d67-43e4-bebb-07f5885be84e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 68c537e4-b61a-4b38-8918-50f1221553cb
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 68c537e4-b61a-4b38-8918-50f1221553cb
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 923e1a3e-918f-47f8-9880-c701886626a5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/923e1a3e-918f-47f8-9880-c701886626a5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: eda9fcf2-781a-4628-a122-2f9fae61db37
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cardHeight: false
+    cardWidth: false
+    fadeSeconds: false
+    footer: false
+    glyphColor: false
+    material: false
+    subtitle: false
+    title: false
+    viewDistance: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      cardWidth: !<float> 11.000000
+      cardHeight: !<float> 10.000000
+      title: Lesson complete
+      subtitle: Characters practiced
+      footer: Pinch Next stroke to close
+      glyphColor: !<Vec4> {x: 0.550000, y: 0.850000, z: 1.000000, w: 1.000000}
+      viewDistance: !<float> 57.000000
+      fadeSeconds: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"Ink Ghost end-of-lesson card (UIKit)"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Material material {"hint":"Unlit vertex-colour material for the small character drawings"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float cardWidth = 11 {"hint":"Card width, cm", "widget":"slider", "min":6, "max":20, "step":0.5}'
+    - '// @input float cardHeight = 10 {"hint":"Card height, cm", "widget":"slider", "min":6, "max":20, "step":0.5}'
+    - '// @input string title = "Lesson complete" {"hint":"Title text"}'
+    - '// @input string subtitle = "Characters practiced" {"hint":"Line above the practiced characters"}'
+    - '// @input string footer = "Pinch Next stroke to close" {"hint":"Hint at the bottom of the card"}'
+    - '// @input vec4 glyphColor = {0.55,0.85,1,1} {"hint":"Colour of the practiced-character drawings", "widget":"color"}'
+    - '// @input float viewDistance = 57 {"hint":"Eye-to-sheet distance used to size the text, cm", "widget":"slider", "min":30, "max":110, "step":1}'
+    - '// @input float fadeSeconds = 0.5 {"hint":"Fade-out time, seconds", "widget":"slider", "min":0.1, "max":2, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

@@ -4,6 +4,11 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
+    - !<own> 943d9432-158f-47ab-a868-b9a7af55d29f
+    - !<own> fd964073-41ab-42cf-bf14-311fa6795973
+    - !<own> 8b3b1be6-e378-4293-9508-cd4f5baecacf
+    - !<own> e9c6c12c-fdd9-434e-92a3-a162c04ed41c
+    - !<own> 1770ac3a-8f88-46bc-ae92-c6bae19f535c
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -496,6 +501,21 @@
     - !<own> a6af4948-9adc-4052-ae22-db902dd2764e
   Components:
     []
+- !<SceneObject/1770ac3a-8f88-46bc-ae92-c6bae19f535c>
+  PrefabRemaps:
+    []
+  Name: AiPreviewAgent Handler
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6afc08f0-b851-429e-93dd-94294e0b721c
 - !<SceneObject/181c239f-175e-4912-94fc-d37a2599b2d6>
   PrefabRemaps:
     []
@@ -708,6 +728,21 @@
     - !<own> a7da4af4-3d84-4acd-a31e-920a56b4c5c8
   Components:
     []
+- !<SceneObject/2f94157b-7e4d-45fa-8c23-b36034a5ae46>
+  PrefabRemaps:
+    []
+  Name: InkGhostController
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4d12c270-c82a-43c0-bcef-b680243fb5a1
 - !<RenderMeshVisual/335c5f8b-2917-49e8-8af5-220696e9bc09>
   PrefabRemaps:
     []
@@ -777,6 +812,21 @@
   Children:
     - !<own> 71e47ae8-e7da-438c-be22-b495f0fbd4fe
     - !<own> cec12eef-3a06-4b4a-b0ba-3de212ca34dc
+  Components:
+    []
+- !<SceneObject/381c5c0e-ad86-4ef9-800a-d2da932e1179>
+  PrefabRemaps:
+    []
+  Name: ProgressRow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.050000, z: -13.300000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
   Components:
     []
 - !<SceneObject/38562bff-09c5-4232-bff1-7ea62a1e7ec5>
@@ -914,6 +964,21 @@
     - !<own> 8fe2a532-9bf3-4cde-b598-04ce5470718d
   Components:
     []
+- !<SceneObject/4b0e134d-60c3-41e0-a6d1-bc4274780235>
+  PrefabRemaps:
+    []
+  Name: StandIn_Desk
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -41.599998, z: -45.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d470963b-4a1a-4535-bc61-a5fcbfb13bc5
 - !<SceneObject/4c195c04-c397-454e-bd08-3485f37d84fe>
   PrefabRemaps:
     []
@@ -944,6 +1009,44 @@
     []
   Components:
     - !<own> 5f153ad7-2baa-4fd9-a298-0dcfad86da3b
+- !<ScriptComponent/4d12c270-c82a-43c0-bcef-b680243fb5a1>
+  PrefabRemaps:
+    []
+  Name: InkGhostController
+  Enabled: true
+  ScriptAsset: !<reference> 2d67920d-1795-4b32-837d-54a68a9eeda9
+  ScriptInputsDefault:
+    boxSize: true
+    writingSquareSize: true
+    sheetSize: true
+    deskSize: true
+    strokeSeconds: true
+    completeSeconds: true
+    fadeSeconds: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      lesson: !<reference.JsonAsset> 72631b28-f200-4aef-ad95-1352ca6df502
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      sheet: !<reference.SceneObject> 62934572-d161-4989-b9cf-f302928ee35b
+      desk: !<reference.SceneObject> 4b0e134d-60c3-41e0-a6d1-bc4274780235
+      sheetOverlay: !<reference.SceneObject> a1135302-e683-4e3d-ab7b-5decdbefc304
+      guideBox: !<reference.SceneObject> 7db00cb5-b685-427d-9607-6ec0fcd17f6a
+      writingSquare: !<reference.SceneObject> bc1ceeac-a9d4-4e85-853b-7f08ba0e30ed
+      progressRow: !<reference.SceneObject> 381c5c0e-ad86-4ef9-800a-d2da932e1179
+      targets: !<MappingBased.AssignableType_1> 625b3034-ad38-4c2a-b772-c557dc768224
+      endCard: !<MappingBased.AssignableType_2> 690d865b-29df-410d-a3f9-d3a99d351443
+      boxSize: !<float> 10.000000
+      writingSquareSize: !<float> 10.000000
+      sheetSize: !<Vec2> {x: 21.000000, y: 29.700001}
+      deskSize: !<Vec2> {x: 120.000000, y: 60.000000}
+      strokeSeconds: 1.200000
+      completeSeconds: !<float> 2.000000
+      fadeSeconds: 0.400000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/52ecefe4-5642-445a-ad16-52ce818076bc>
   PrefabRemaps:
     []
@@ -959,6 +1062,22 @@
     - !<own> 8363e9a6-cd83-4889-abd4-6521e394f244
   Components:
     []
+- !<ScriptComponent/537d88cc-6098-4daa-b84b-0fc0364d432e>
+  PrefabRemaps:
+    []
+  Name: AgentInteractScript
+  Enabled: true
+  ScriptAsset: !<reference> 29091811-e792-46be-bfa4-28ddec5f11be
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/54130007-65c1-48d3-b9df-0866d8112e01>
   PrefabRemaps:
     []
@@ -1013,6 +1132,49 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/625b3034-ad38-4c2a-b772-c557dc768224>
+  PrefabRemaps:
+    []
+  Name: InkGhostTargetsUI
+  Enabled: true
+  ScriptAsset: !<reference> 1bf7d2c8-2f3c-4914-b83d-da93b7fbbed1
+  ScriptInputsDefault:
+    nextSize: true
+    replaySize: true
+    gap: true
+    nextLabel: true
+    replayLabel: true
+    viewDistance: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      nextSize: !<float> 6.000000
+      replaySize: !<float> 4.000000
+      gap: 0.800000
+      nextLabel: Next stroke
+      replayLabel: Replay
+      viewDistance: !<float> 57.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/62934572-d161-4989-b9cf-f302928ee35b>
+  PrefabRemaps:
+    []
+  Name: StandIn_Sheet
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -40.049999, z: -40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7db00cb5-b685-427d-9607-6ec0fcd17f6a
+    - !<own> bc1ceeac-a9d4-4e85-853b-7f08ba0e30ed
+    - !<own> 381c5c0e-ad86-4ef9-800a-d2da932e1179
+  Components:
+    - !<own> f169a93b-0467-4808-9ac0-88013452d756
 - !<ScriptComponent/62967490-d66e-4479-8829-e5c9da5b5b57>
   PrefabRemaps:
     []
@@ -1139,6 +1301,37 @@
     - !<own> 80574bd1-697b-4bb5-b9ce-13b340146d82
   Components:
     - !<own> ccf4d3bc-d3c2-4580-b9c5-62f164ef7eef
+- !<ScriptComponent/690d865b-29df-410d-a3f9-d3a99d351443>
+  PrefabRemaps:
+    []
+  Name: InkGhostEndCardUI
+  Enabled: true
+  ScriptAsset: !<reference> 68c537e4-b61a-4b38-8918-50f1221553cb
+  ScriptInputsDefault:
+    cardWidth: true
+    cardHeight: true
+    title: true
+    subtitle: true
+    footer: true
+    glyphColor: true
+    viewDistance: true
+    fadeSeconds: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      cardWidth: !<float> 11.000000
+      cardHeight: !<float> 10.000000
+      title: Lesson complete
+      subtitle: Characters practiced
+      footer: Pinch Next stroke to close
+      glyphColor: !<Vec4> {x: 0.550000, y: 0.850000, z: 1.000000, w: 1.000000}
+      viewDistance: !<float> 57.000000
+      fadeSeconds: 0.500000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6a7a67db-5675-49bb-8f31-ba0588e3cffc>
   PrefabRemaps:
     []
@@ -1184,6 +1377,22 @@
     - !<own> ca40734c-262f-48d3-affa-9f99cd2940f7
   Components:
     []
+- !<ScriptComponent/6afc08f0-b851-429e-93dd-94294e0b721c>
+  PrefabRemaps:
+    []
+  Name: AgentInspectScript
+  Enabled: true
+  ScriptAsset: !<reference> 0b25079c-f5bf-4c6d-96c4-f43b89dfa213
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6c1f70d7-86d0-4972-b203-29780f8798e6>
   PrefabRemaps:
     []
@@ -1214,6 +1423,22 @@
     - !<own> 4c195c04-c397-454e-bd08-3485f37d84fe
   Components:
     []
+- !<ScriptComponent/6ec16bc1-6ed5-45e1-957a-e136c3575e20>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/7037a633-4899-4f2e-bc97-2e3f35395687>
   PrefabRemaps:
     []
@@ -1336,6 +1561,21 @@
     - !<own> 6ae8bf8e-a2cb-4898-a4da-25d119a01856
     - !<own> e76a5053-8f30-4cda-9cd1-def2036e3255
     - !<own> 3b4f5057-b516-4d3b-9c8d-14c81af2f505
+  Components:
+    []
+- !<SceneObject/7db00cb5-b685-427d-9607-6ec0fcd17f6a>
+  PrefabRemaps:
+    []
+  Name: GuideBox
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 2.000000, y: 0.050000, z: -6.300000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
   Components:
     []
 - !<SceneObject/7e2075c6-0882-4275-8365-16a03da73298>
@@ -1476,6 +1716,21 @@
     - !<own> 1fc7fa3e-6910-4741-b8a7-1b6660a39a9d
   Components:
     - !<own> 28e05826-1521-46fa-a54c-80f2957ec80c
+- !<SceneObject/8b3b1be6-e378-4293-9508-cd4f5baecacf>
+  PrefabRemaps:
+    []
+  Name: AiPreviewAgent Handler
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 537d88cc-6098-4daa-b84b-0fc0364d432e
 - !<SceneObject/8b877074-7eee-4be1-b669-714f8d5a1da3>
   PrefabRemaps:
     []
@@ -1544,6 +1799,21 @@
     - !<own> 8cb3dd13-6ebf-41e6-9a23-94a69dd96f87
   Components:
     []
+- !<SceneObject/943d9432-158f-47ab-a868-b9a7af55d29f>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6ec16bc1-6ed5-45e1-957a-e136c3575e20
 - !<SceneObject/9468c53c-f76f-49b7-8a49-b5ec6af1c5a3>
   PrefabRemaps:
     []
@@ -1560,6 +1830,22 @@
     - !<own> e9454e66-5d09-4a8a-bcd7-dea762326a48
   Components:
     []
+- !<ScriptComponent/950a4f89-f60a-492a-b32a-260d4661b1b1>
+  PrefabRemaps:
+    []
+  Name: LeafIndex
+  Enabled: true
+  ScriptAsset: !<reference> 07177f1b-f8cb-4dda-8b8f-399435f9e81e
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/988c408a-99dc-47e6-b7c4-efbf4bf8dc3c>
   PrefabRemaps:
     []
@@ -1634,6 +1920,22 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 46ea93d6-d161-4453-9064-6ac11e1d6523
+  Components:
+    []
+- !<SceneObject/a1135302-e683-4e3d-ab7b-5decdbefc304>
+  PrefabRemaps:
+    []
+  Name: SheetOverlay
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -40.049999, z: -40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c8acdf4c-4b0c-4f83-b912-0299046ea803
+    - !<own> e6a00c7f-bd76-45b7-b97a-9f1414f23b95
   Components:
     []
 - !<SceneObject/a4b1ce71-4840-4493-bc52-58f3c13933e1>
@@ -1940,6 +2242,21 @@
     - !<own> fe93d992-1114-4f1f-8bef-0a0bbd75747d
   Components:
     []
+- !<SceneObject/bc1ceeac-a9d4-4e85-853b-7f08ba0e30ed>
+  PrefabRemaps:
+    []
+  Name: WritingSquare
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 2.000000, y: 0.050000, z: 6.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<SceneObject/bf2095b6-c6f8-48c8-b840-e0a6cec0dc99>
   PrefabRemaps:
     []
@@ -1955,6 +2272,21 @@
     []
   Components:
     []
+- !<SceneObject/c8acdf4c-4b0c-4f83-b912-0299046ea803>
+  PrefabRemaps:
+    []
+  Name: Targets
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -7.000000, y: 0.050000, z: -3.900000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 625b3034-ad38-4c2a-b772-c557dc768224
 - !<ScriptComponent/c8e031d3-a8a1-468a-a419-427f8556de4c>
   PrefabRemaps:
     []
@@ -2111,6 +2443,29 @@
   ScriptInputs:
     "":
       {}
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/d470963b-4a1a-4535-bc61-a5fcbfb13bc5>
+  PrefabRemaps:
+    []
+  Name: StandInBox
+  Enabled: true
+  ScriptAsset: !<reference> 08ccbbeb-050f-4ed1-b44e-98f1d2df3ce2
+  ScriptInputsDefault:
+    legLength: true
+    legThickness: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      size: !<Vec3> {x: 120.000000, y: 3.000000, z: 60.000000}
+      topColor: !<Vec3> {x: 0.550000, y: 0.400000, z: 0.270000}
+      sideColor: !<Vec3> {x: 0.400000, y: 0.280000, z: 0.180000}
+      legs: true
+      legLength: !<float> 72.000000
+      legThickness: !<float> 4.000000
   ScriptTypes:
     "":
       {}
@@ -2298,6 +2653,21 @@
     InvertRotation: false
   SurfaceOptions: !<SurfaceOptions>
     EnhanceWithNativeAR: false
+- !<SceneObject/e6a00c7f-bd76-45b7-b97a-9f1414f23b95>
+  PrefabRemaps:
+    []
+  Name: EndCard
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 2.000000, y: 0.700000, z: -6.300000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 690d865b-29df-410d-a3f9-d3a99d351443
 - !<SceneObject/e76a5053-8f30-4cda-9cd1-def2036e3255>
   PrefabRemaps:
     []
@@ -2351,6 +2721,21 @@
     Fingers_length: 0.000000
     Thumb_inflate: 0.000000
     Thumb_length: 0.000000
+- !<SceneObject/e9c6c12c-fdd9-434e-92a3-a162c04ed41c>
+  PrefabRemaps:
+    []
+  Name: LeafIndex
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 950a4f89-f60a-492a-b32a-260d4661b1b1
 - !<SceneObject/f0394c5d-4c44-4c65-a77c-e1c7e05ca905>
   PrefabRemaps:
     []
@@ -2366,6 +2751,32 @@
     []
   Components:
     []
+- !<ScriptComponent/f169a93b-0467-4808-9ac0-88013452d756>
+  PrefabRemaps:
+    []
+  Name: StandInBox
+  Enabled: true
+  ScriptAsset: !<reference> 08ccbbeb-050f-4ed1-b44e-98f1d2df3ce2
+  ScriptInputsDefault:
+    size: true
+    topColor: true
+    legs: true
+    legLength: true
+    legThickness: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      material: !<reference.Material> 70d03593-c7b4-410a-ae5c-75cb82ee32dc
+      size: !<Vec3> {x: 21.000000, y: 0.100000, z: 29.700001}
+      topColor: !<Vec3> {x: 0.800000, y: 0.800000, z: 0.800000}
+      sideColor: !<Vec3> {x: 0.680000, y: 0.680000, z: 0.680000}
+      legs: false
+      legLength: !<float> 72.000000
+      legThickness: !<float> 4.000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f36287fd-ed56-442d-ba20-78f9ef6f3502>
   PrefabRemaps:
     []
@@ -2586,6 +2997,24 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 2dae2a27-8ce6-466a-8bff-622195c1b3a8
+  Components:
+    []
+- !<SceneObject/fd964073-41ab-42cf-bf14-311fa6795973>
+  PrefabRemaps:
+    []
+  Name: InkGhost
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4b0e134d-60c3-41e0-a6d1-bc4274780235
+    - !<own> 62934572-d161-4989-b9cf-f302928ee35b
+    - !<own> 2f94157b-7e4d-45fa-8c23-b36034a5ae46
+    - !<own> a1135302-e683-4e3d-ab7b-5decdbefc304
   Components:
     []
 - !<SceneObject/fe93d992-1114-4f1f-8bef-0a0bbd75747d>
