@@ -71,6 +71,8 @@ Reloading: write the new lesson to a temporary file and move it over `lesson_bas
 
 A manual check replaced the lesson with 山, あ, 書 (3, 3 and 10 strokes): it loaded and drew correctly.
 
+For the demo video, a second lesson was made the same way for 愛 (love), 忍 (endurance) and 夢 (dream), 13, 7 and 13 strokes, and recorded in the preview with no code changes. That file is kept in `examples/lesson_love_nin_dream.json` (same format and license); the lesson in `Assets/Lesson/` was put back afterwards.
+
 ## Tests (LEAF)
 
 The LEAF scenarios are in `Assets/Tests` and run in the preview (LEAF 2.0.2). Run them from the LEAF panel in Lens Studio, or ask a coding agent to run them through the Lens Studio MCP. The results appear in the Lens Studio log as `PASSED:` lines.
