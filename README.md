@@ -114,7 +114,7 @@ No SPECS glasses were used. These remain unproven:
 
 ## Credits, licenses, and pre-existing work
 
-- Stroke data: [KanjiVG](https://kanjivg.tagaini.net/), copyright Ulrich Apel, licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). `Assets/Lesson/lesson_basic_strokes.json` is converted from it by `tools/strokes_from_kanjivg.py` and stays under CC BY-SA 3.0 with this credit.
+- Stroke data: [KanjiVG](https://kanjivg.tagaini.net/), copyright Ulrich Apel, licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). `Assets/Lesson/lesson_basic_strokes.json` and `examples/lesson_love_nin_dream.json` are converted from it by `tools/strokes_from_kanjivg.py` and stay under CC BY-SA 3.0 with this credit.
 - Pre-existing work used as is: the Lens Studio SPECS Base Template, Spectacles Interaction Kit and UI Kit (from the template), and the LEAF package (2.0.2) with its dependency Bitmoji 3D (installed from Lens Studio's Asset Library), used under the terms that apply to Lens Studio and its packages; and the SimpleVertexBaseColor material that ships with the ls-clad plugin (Apache-2.0).
-- The `plan-lens` skill in `.claude/skills/` is from the Devpost Learn skill pack (MIT).
+- The `plan-lens` skill in `.claude/skills/` is from the Devpost Learn skill pack ([challengepost/learn-specs](https://github.com/challengepost/learn-specs), MIT, copyright 2026 Devpost; its license is in `.claude/skills/plan-lens/LICENSE`).
 - Everything else in `Assets/Scripts`, `Assets/Tests`, and `tools/` was written for this project during the hackathon and is released under the MIT License (see `LICENSE`).
